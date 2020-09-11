@@ -2,19 +2,12 @@ import React from 'react';
 import clsx from 'clsx';
 import { mainListItems, secondaryListItems } from './ListItems';
 import { makeStyles } from '@material-ui/core/styles';
-import { CssBaseline, AppBar, Toolbar, Typography, Badge, IconButton, Drawer, Divider, List, Box, Grid, Container, Paper, ListItem, ListItemIcon, ListItemText } from '@material-ui/core'
+import { CssBaseline, AppBar, Toolbar, Typography, Badge, IconButton, Drawer, Divider, List, Box, Container, ListItem, ListItemIcon, ListItemText } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import DriveEtaIcon from '@material-ui/icons/DriveEta';
-
-function Footer() {
-  return (
-    <Typography varient="body2" color="textSecondary" align="center">
-      {'Senier_Project Sehwan & KyungWon & JungYeon & Harim by'}{' '}{new Date().getFullYear()}{'.'}
-    </Typography>
-  );
-}
+import StickyFooter from './StickyFooter';
 
 const drawerWidth = 240;
 
@@ -23,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
       display: 'flex',
     },
     toolbar: {
-      paddingRight: 24, // keep right padding when drawer closed
+      paddingRight: 24, // 메뉴 닫을 때 오른쪽 패딩을 유지함.
     },
     toolbarIcon: {
       display: 'flex',
@@ -143,7 +136,7 @@ export default function Dashboard() {
                     <ListItemIcon>
                       <DriveEtaIcon />
                     </ListItemIcon>
-                    <ListItemText primary="Data PlatFrom" />
+                    <ListItemText primary="Data PlatForm"/>
                   </ListItem>
                     <IconButton onClick={handdleDrawerClose}>
                         <ChevronLeftIcon />
@@ -157,25 +150,8 @@ export default function Dashboard() {
             <main className={classes.content}>
               <div className={classes.appBarSpacer} />
               <Container maxWidth="lg">
-                <Grid container spacing={3}>
-                  <Grid item xs={12} md={8} lg={9}>
-                    <Paper>
-
-                    </Paper>
-                  </Grid>
-                  <Grid item xs={12} md={4} lg={3}>
-                    <Paper>
-
-                    </Paper>
-                  </Grid>
-                </Grid>
-                <Grid item xs={12}>
-                  <Paper>
-
-                  </Paper>
-                </Grid>
                 <Box pt={4}>
-                  <Footer />
+                  <StickyFooter />
                 </Box>
               </Container>
             </main>
