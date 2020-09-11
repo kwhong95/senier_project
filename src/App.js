@@ -1,5 +1,6 @@
 import React from 'react';
 import Dashboard from './Layouts/Dashboard';
+import './App.css';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 const theme = createMuiTheme ({
@@ -9,8 +10,11 @@ const theme = createMuiTheme ({
       main: '#454545',
       dark: '#303030',
       contrastText: '#fff'
+    },
+    secondary: {
+      main: '#fff',
     }
-  }
+  },
 });
 
 function App() {

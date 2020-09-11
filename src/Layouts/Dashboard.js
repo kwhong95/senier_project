@@ -2,18 +2,19 @@ import React from 'react';
 import clsx from 'clsx';
 import { mainListItems, secondaryListItems } from './ListItems';
 import { makeStyles } from '@material-ui/core/styles';
-import { CssBaseline, AppBar, Toolbar, Typography, Badge, IconButton, Drawer, Divider, List, Box, Container, ListItem, ListItemIcon, ListItemText } from '@material-ui/core'
+import { CssBaseline, AppBar, Toolbar, Typography, Badge, IconButton, Drawer, Divider, List, Container, ListItem, ListItemIcon, ListItemText } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import DriveEtaIcon from '@material-ui/icons/DriveEta';
-import StickyFooter from './StickyFooter';
+import Speedometer from './Components/Speedometer'
 
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
     root: {
       display: 'flex',
+      backgroundColor: '#212121',
     },
     toolbar: {
       paddingRight: 24, // 메뉴 닫을 때 오른쪽 패딩을 유지함.
@@ -50,6 +51,8 @@ const useStyles = makeStyles((theme) => ({
       flexGrow: 1,
     },
     drawerPaper: {
+      color: '#FAFAFA',
+      backgroundColor: '#303030',
       position: 'relative',
       whiteSpace: 'nowrap',
       width: drawerWidth,
@@ -134,7 +137,7 @@ export default function Dashboard() {
                 <div className={classes.toolbarIcon}>
                   <ListItem button>
                     <ListItemIcon>
-                      <DriveEtaIcon />
+                      <DriveEtaIcon color="secondary"/>
                     </ListItemIcon>
                     <ListItemText primary="Data PlatForm"/>
                   </ListItem>
@@ -150,9 +153,7 @@ export default function Dashboard() {
             <main className={classes.content}>
               <div className={classes.appBarSpacer} />
               <Container maxWidth="lg">
-                <Box pt={4}>
-                  <StickyFooter />
-                </Box>
+                <Speedometer />
               </Container>
             </main>
         </div>

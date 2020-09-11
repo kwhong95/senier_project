@@ -7,7 +7,7 @@ import Container from '@material-ui/core/Container';
 function Copyright() {
   return (
     <Typography variant="body3" color="textSecondary">
-      {'Senier_Project Sehwan & KyungWon & JungYeon & Harim by'}{' '}{new Date().getFullYear()}
+      {'Senier_Project by Sehwan & KyungWon & JungYeon & Harim since'}{' '}{new Date().getFullYear()}
     </Typography>
   );
 }
@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(2),
   },
   footer: {
+    position: 'relative',
     padding: theme.spacing(3, 2),
     marginTop: 'auto',
     backgroundColor:

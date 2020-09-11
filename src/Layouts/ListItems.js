@@ -14,31 +14,31 @@ export const mainListItems = (
   <div>
     <ListItem button>
       <ListItemIcon>
-        <DashboardIcon />
+        <DashboardIcon color="secondary"/>
       </ListItemIcon>
       <ListItemText primary="Dashboard" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <ShoppingCartIcon />
+        <ShoppingCartIcon color="secondary"/>
       </ListItemIcon>
       <ListItemText primary="Item2" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <PeopleIcon />
+        <PeopleIcon color="secondary"/>
       </ListItemIcon>
       <ListItemText primary="Item3" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <BarChartIcon />
+        <BarChartIcon color="secondary"/>
       </ListItemIcon>
       <ListItemText primary="Item4" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <LayersIcon />
+        <LayersIcon color="secondary"/>
       </ListItemIcon>
       <ListItemText primary="Item5" />
     </ListItem>
@@ -47,22 +47,22 @@ export const mainListItems = (
 
 export const secondaryListItems = (
   <div>
-    <ListSubheader inset>통계 자료</ListSubheader>
+    <ListSubheader inset color="inherit">통계 자료</ListSubheader>
     <ListItem button>
       <ListItemIcon>
-        <AssignmentIcon />
+        <AssignmentIcon color="secondary"/>
       </ListItemIcon>
       <ListItemText primary="Day's Data" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <AssignmentIcon />
+        <AssignmentIcon color="secondary"/>
       </ListItemIcon>
       <ListItemText primary="Month's Data" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <AssignmentIcon />
+        <AssignmentIcon color="secondary"/>
       </ListItemIcon>
       <ListItemText primary="Year's Data" />
     </ListItem>
